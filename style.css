@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 18px;
+    background: linear-gradient(135deg, #101827, #1c3150, #172033);
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #526b8b;
+    border-radius: 30px;
+    color: #b8d8ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 8px;
+}
+
+.heading p {
+    color: #c0ccdc;
+    font-size: 15px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #172033;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.4);
+}
+
+.slides {
+    position: relative;
+    height: 520px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent 70%);
+}
+
+.caption {
+    position: absolute;
+    z-index: 2;
+    bottom: 65px;
+    left: 55px;
+    right: 55px;
+}
+
+.caption span {
+    color: #b8d8ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.caption h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(25px, 4vw, 42px);
+    margin: 10px 0;
+}
+
+.caption p {
+    color: #e0e7f0;
+    font-size: 16px;
+}
+
+.nav-button {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background: rgba(16, 24, 39, 0.6);
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-button:hover {
+    background: #477bd1;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.previous {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.carousel-footer {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    background: rgba(10, 18, 31, 0.7);
+}
+
+.indicators {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.indicator {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: width 0.3s, background 0.3s;
+}
+
+.indicator.active {
+    width: 28px;
+    background: #8fc5ff;
+}
+
+.slide-count {
+    color: #e1e9f4;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.hint {
+    margin-top: 20px;
+    text-align: center;
+    color: #c0ccdc;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 22px 12px;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+    }
+
+    .heading p {
+        font-size: 13px;
+    }
+
+    .slides {
+        height: 430px;
+    }
+
+    .carousel {
+        border-radius: 16px;
+    }
+
+    .caption {
+        left: 22px;
+        right: 22px;
+        bottom: 75px;
+    }
+
+    .caption p {
+        font-size: 13px;
+    }
+
+    .nav-button {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .previous {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .carousel-footer {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel | Day 22</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="heading">
+            <span class="tag">DAY 22 · INTERNSHIP</span>
+            <h1>Image Carousel</h1>
+            <p>Explore beautiful moments, one slide at a time.</p>
+        </header>
+
+        <section class="carousel" aria-label="Image carousel">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85" alt="Beautiful mountain landscape">
+                    <div class="caption">
+                        <span>01 / 05</span>
+                        <h2>Explore the Unknown</h2>
+                        <p>Find beauty in every new journey.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85" alt="Lake surrounded by mountains">
+                    <div class="caption">
+                        <span>02 / 05</span>
+                        <h2>Peaceful Escapes</h2>
+                        <p>Let nature refresh your mind.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1400&q=85" alt="Golden sunrise over a field">
+                    <div class="caption">
+                        <span>03 / 05</span>
+                        <h2>Chase the Sunrise</h2>
+                        <p>Every morning brings new possibilities.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85" alt="Sunlight filtering through a forest">
+                    <div class="caption">
+                        <span>04 / 05</span>
+                        <h2>Into the Wild</h2>
+                        <p>Discover calm among the trees.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85" alt="Blue ocean and sandy beach">
+                    <div class="caption">
+                        <span>05 / 05</span>
+                        <h2>Ocean Dreams</h2>
+                        <p>Follow the waves and feel free.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-button previous" id="previous" aria-label="Previous slide">&#10094;</button>
+            <button class="nav-button next" id="next" aria-label="Next slide">&#10095;</button>
+
+            <div class="carousel-footer">
+                <div class="indicators" id="indicators" aria-label="Choose a slide">
+                    <button class="indicator active" aria-label="Slide 1" aria-current="true"></button>
+                    <button class="indicator" aria-label="Slide 2"></button>
+                    <button class="indicator" aria-label="Slide 3"></button>
+                    <button class="indicator" aria-label="Slide 4"></button>
+                    <button class="indicator" aria-label="Slide 5"></button>
+                </div>
+                <span class="slide-count" id="slideCount">01 / 05</span>
+            </div>
+        </section>
+
+        <p class="hint">Hover over the image to pause the slideshow.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
